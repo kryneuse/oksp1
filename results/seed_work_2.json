@@ -1,0 +1,1 @@
+{"size": "work", "tables": {"users": {"n": 3000, "hash": "aef4041c5f20acd401fde1a83200786b"}, "categories": {"n": 10, "hash": "77468be6c39e3ed5cb30e56d8edb9a43"}, "tickets": {"n": 50000, "hash": "baa98a3094f2b45218359cd5844a382e"}, "comments": {"n": 150000, "hash": "cfbc4d6cc6622061761619d272120562"}}}

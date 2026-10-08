@@ -1,0 +1,1 @@
+{"size": "small", "tables": {"users": {"n": 50, "hash": "dc9e0589ee41ae12b15176888a30ea2a"}, "categories": {"n": 5, "hash": "801a0e96978c057d2a80b8d0363e9947"}, "tickets": {"n": 300, "hash": "b5bf1c5b1c6b7c80b516bd20f5d34b57"}, "comments": {"n": 900, "hash": "6ca64f232ffaf428c508b114263f382d"}}}

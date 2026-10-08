@@ -1,0 +1,29 @@
+name: nikita_zozulenko
+services:
+  db:
+    image: postgres:16.10
+    environment:
+      POSTGRES_DB: nikita_zozulenko
+      POSTGRES_USER: coursework
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-changeme}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U coursework -d nikita_zozulenko"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    volumes:
+      - database:/var/lib/postgresql/data
+  api:
+    build: .
+    environment:
+      DATABASE_URL: postgresql://coursework:${DB_PASSWORD:-changeme}@db:5432/nikita_zozulenko
+      APP_PASSWORD: ${APP_PASSWORD:-demo}
+      SECRET_KEY: ${SECRET_KEY:-local-coursework-change-me}
+    ports: ["127.0.0.1:8080:8080"]
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./results:/service/results
+volumes:
+  database:
