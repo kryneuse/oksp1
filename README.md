@@ -53,3 +53,7 @@ docker compose exec api python benchmark.py work
 Публичный репозиторий: https://github.com/kryneuse/oksp1
 
 Отчёт с исходными замерами: [Отчёт ДЗ 1 Зозуленко.docx](docs/Отчёт%20ДЗ%201%20Зозуленко.docx).
+
+## Нагрузочное испытание
+
+Тесты второго этапа и команды запуска: [load/README.md](load/README.md).
